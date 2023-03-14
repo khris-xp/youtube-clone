@@ -1,7 +1,8 @@
 import React from 'react';
+import { Fragment } from 'react';
 
 const Video: React.FC = () => {
-  return <div>Video</div>;
+  return <Fragment>Video</Fragment>;
 };
 
 export default Video;

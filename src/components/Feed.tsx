@@ -1,7 +1,8 @@
 import React from 'react';
+import { Fragment } from 'react';
 
 const Feed: React.FC = () => {
-  return <div>Feed</div>;
+  return <Fragment>Feed</Fragment>;
 };
 
 export default Feed;

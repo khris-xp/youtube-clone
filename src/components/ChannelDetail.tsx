@@ -1,7 +1,8 @@
 import React from 'react';
+import { Fragment } from 'react';
 
 const ChannelDetail: React.FC = () => {
-  return <div>ChannelDetail</div>;
+  return <Fragment>ChannelDetail</Fragment>;
 };
 
 export default ChannelDetail;

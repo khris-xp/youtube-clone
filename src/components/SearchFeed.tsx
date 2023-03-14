@@ -1,7 +1,8 @@
 import React from 'react';
+import { Fragment } from 'react';
 
 const SearchFeed: React.FC = () => {
-  return <div>SearchFeed</div>;
+  return <Fragment>SearchFeed</Fragment>;
 };
 
 export default SearchFeed;
