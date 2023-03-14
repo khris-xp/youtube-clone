@@ -21,7 +21,7 @@ const Sidebar: React.FC = () => {
           <div>
             {category.name === selectedCategory ? (
               <button
-                className='font-bold capitalize flex items-center justify-start cursor-pointer bg-transparent outline-none border-none py-2 px-4 my-4 rounded-full transition-all duration-300 hover:bg-red-600 text-white bg-red-700'
+                className='font-bold capitalize flex items-center justify-start cursor-pointer bg-transparent outline-none border-none py-2 px-4 my-4 rounded-full transition-all duration-300 hover:bg-red-600 text-white bg-main-color'
                 key={category.name}
               >
                 <span className='text-white mr-2'>{category.icon}</span>
@@ -29,11 +29,11 @@ const Sidebar: React.FC = () => {
               </button>
             ) : (
               <button
-                className='font-bold capitalize flex items-center justify-start cursor-pointer bg-transparent outline-none border-none py-2 px-4 my-4 rounded-full transition-all duration-300 hover:bg-red-600 text-white'
+                className='font-bold capitalize flex items-center justify-start cursor-pointer bg-transparent outline-none border-none py-2 px-4 my-4 rounded-full transition-all duration-300 hover:bg-main-color text-white'
                 key={category.name}
               >
                 <span className='text-white mr-2'>{category.icon}</span>
-                <span className='opacity-100'>{category.name}</span>
+                <span className='opacity-80'>{category.name}</span>
               </button>
             )}
           </div>
