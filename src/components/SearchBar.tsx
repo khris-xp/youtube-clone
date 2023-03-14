@@ -17,7 +17,7 @@ const SearchBar: React.FC = () => {
         }}
       >
         <input
-          className='border-none outline-none w-[350px]'
+          className='border-none outline-none w-[200px] sm:w-[350px]'
           placeholder='Search ...'
         />
         <IconButton
