@@ -7,6 +7,9 @@ export interface VideoProps {
   id: Id;
   snippet: VideoSnippet;
 }
+export interface VideoCardProps {
+  video: VideoProps;
+}
 export interface Id {
   kind?: string;
   videoId: string;

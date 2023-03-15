@@ -10,11 +10,7 @@ import {
   demoChannelUrl,
   demoChannelTitle,
 } from '../utils/constants';
-import { VideoProps } from '../interfaces/video';
-
-interface VideoCardProps {
-  video: VideoProps;
-}
+import { VideoCardProps } from '../interfaces/video';
 
 const VideoCard: React.FC<VideoCardProps> = ({
   video: {
