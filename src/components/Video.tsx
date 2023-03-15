@@ -7,7 +7,7 @@ import { VideoI } from '../interfaces/video';
 const Video: React.FC<VideoI> = ({ videos }) => {
   return (
     <Fragment>
-      <Stack direction='row' flexWrap='wrap' justifyContent='start' gap={2}>
+      <Stack direction='row' flexWrap='wrap' justifyContent='start' gap={5}>
         {videos.map((item: any, idx: number) => (
           <Box key={idx}>
             {item.id.videoId && <VideoCard video={item} />}
