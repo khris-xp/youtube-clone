@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Fragment } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { Sidebar, Video } from './';
+import { Fragment } from 'react';
 
 import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const Feed: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('New');
+  const [selectedCategory, setSelectedCategory] = useState('Coding');
   const [video, setVideo] = useState([]);
 
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
       setVideo(data.items)
     );
-  }, [setSelectedCategory]);
+  }, [selectedCategory]);
   return (
     <Fragment>
       <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>
