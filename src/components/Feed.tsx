@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Fragment } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
-import Sidebar from './Sidebar';
+import { Sidebar, Video } from './';
+
+import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const Feed: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('New');
+  const [video, setVideo] = useState([]);
+
+  useEffect(() => {
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
+      setVideo(data.items)
+    );
+  }, [setSelectedCategory]);
   return (
     <Fragment>
       <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>
@@ -16,7 +26,10 @@ const Feed: React.FC = () => {
             width: { sx: '100%', md: 'auto' },
           }}
         >
-          <Sidebar />
+          <Sidebar
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
           <Box
             sx={{
               width: { sx: '100%', md: 'auto' },
@@ -39,9 +52,10 @@ const Feed: React.FC = () => {
             mb={2}
             sx={{ color: 'white' }}
           >
-            New
+            {selectedCategory}
             <span className='text-main-color'> videos</span>
           </Typography>
+          <Video videos={video} />
         </Box>
       </Stack>
     </Fragment>

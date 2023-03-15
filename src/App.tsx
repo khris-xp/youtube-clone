@@ -11,7 +11,7 @@ const App: React.FC = () => {
         <Navbar />
         <Routes>
           <Route path='/' element={<Feed />} />
-          <Route path='/video/:id' element={<Video />} />
+          <Route path='/video/:id' element={<Video videos={[]} />} />
           <Route path='/channel/:id' element={<ChannelDetail />} />
           <Route path='/search/:searchTerm' element={<SearchFeed />} />
         </Routes>
