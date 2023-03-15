@@ -11,7 +11,9 @@ const Video: React.FC<VideoI> = ({ videos }) => {
         {videos.map((item: any, idx: number) => (
           <Box key={idx}>
             {item.id.videoId && <VideoCard video={item} />}
-            {/* {item.id.channelId && <ChannelCard channelDetail={item} />} */}
+            {item.id.channelId && (
+              <ChannelCard channelDetail={item} videos={[]} />
+            )}
           </Box>
         ))}
       </Stack>

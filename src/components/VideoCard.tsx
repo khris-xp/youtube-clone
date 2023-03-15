@@ -29,7 +29,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
       >
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
           <CardMedia
-            image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
+            image={snippet?.thumbnails?.high?.url}
             sx={{ width: { xs: '100%', sm: '358px' }, height: 180 }}
           />
         </Link>

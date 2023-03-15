@@ -10,12 +10,12 @@ export interface VideoProps {
 export interface VideoCardProps {
   video: VideoProps;
 }
+export interface ChannelCardProps {
+  channelDetail: VideoProps;
+}
 export interface Id {
   kind?: string;
   videoId: string;
-}
-export interface ChannelCardProps {
-  channelId: string;
 }
 export interface VideoSnippet {
   publishedAt: string;

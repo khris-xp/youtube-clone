@@ -12,9 +12,9 @@ import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 
-import { Category } from '../interfaces/category';
+import { CategoryI } from '../interfaces/category';
 
-export const categories: Category[] = [
+export const categories: CategoryI[] = [
   { name: 'New', icon: <HomeIcon /> },
   { name: 'JS Mastery', icon: <CodeIcon /> },
   { name: 'Coding', icon: <CodeIcon /> },

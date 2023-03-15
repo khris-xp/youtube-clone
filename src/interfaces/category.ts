@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-export interface Category {
+export interface CategoryI {
   name: string;
   icon: ReactElement;
 }
