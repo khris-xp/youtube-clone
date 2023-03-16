@@ -1,13 +1,19 @@
-import React from 'react';
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 import { Stack, Box } from '@mui/material';
 import { VideoCard, ChannelCard } from './';
 import { VideoI } from '../interfaces/video';
 
-const Video: React.FC<VideoI> = ({ videos }) => {
+const Video: React.FC<VideoI> = ({ videos, direction }) => {
   return (
     <Fragment>
-      <Stack direction='row' flexWrap='wrap' justifyContent='start' gap={5}>
+      <Stack
+        direction={direction || 'row'}
+        flexWrap='wrap'
+        justifyContent='start'
+        gap={5}
+      >
         {videos.map((item: any, idx: number) => (
           <Box key={idx}>
             {item.id.videoId && <VideoCard video={item} />}

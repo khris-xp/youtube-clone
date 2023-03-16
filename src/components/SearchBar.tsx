@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Paper, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { Fragment } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    if (searchTerm) {
+      navigate(`/search/${searchTerm}`);
+
+      setSearchTerm('');
+    }
+  };
+
   return (
     <Fragment>
       <Paper
@@ -15,10 +29,13 @@ const SearchBar: React.FC = () => {
           boxShadow: 'none',
           mr: { sm: 5 },
         }}
+        onSubmit={handleSubmit}
       >
         <input
           className='border-none outline-none w-[200px] sm:w-[350px]'
           placeholder='Search ...'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <IconButton
           type='submit'
