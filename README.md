@@ -4,7 +4,7 @@ This is a YouTube clone built with React, TypeScript, Tailwind CSS, and Material
 
 ## Project Description
 
-The YouTube clone is a web application that replicates the core features of YouTube. It allows users to search for videos, watch videos, and upload videos.
+The YouTube clone is a web application that replicates the core features of YouTube. It allows users to search for videos, watch videos.
 
 ## Technologies Used
 
