@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import ReactPlayer from 'react-player';
 import { Stack, Box } from '@mui/material';
 import { VideoCard, ChannelCard } from './';
 import { VideoI } from '../interfaces/video';

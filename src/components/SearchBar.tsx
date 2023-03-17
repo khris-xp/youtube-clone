@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Paper, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { Fragment } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const SearchBar: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -13,7 +12,6 @@ const SearchBar: React.FC = () => {
 
     if (searchTerm) {
       navigate(`/search/${searchTerm}`);
-
       setSearchTerm('');
     }
   };

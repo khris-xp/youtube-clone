@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
 import logo from '/youtube.svg';
-import { Fragment } from 'react';
 import SearchBar from './SearchBar';
 
 const Navbar: React.FC = () => {

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Stack } from '@mui/material';
 import { categories } from '../utils/constants';
 import { SidebarProps } from '../interfaces/category';

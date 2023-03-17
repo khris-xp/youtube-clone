@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { Sidebar, Video } from './';
-import { Fragment } from 'react';
-
 import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const Feed: React.FC = () => {

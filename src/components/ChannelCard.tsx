@@ -1,10 +1,9 @@
-import React from 'react';
-import { Fragment } from 'react';
-import { VideoI } from '../interfaces/video';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import { Box, CardContent, CardMedia, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { VideoI } from '../interfaces/video';
 import { demoProfilePicture } from '../utils/constants';
-import { Link } from 'react-router-dom';
 
 const ChannelCard: React.FC<VideoI> = ({ channelDetail }) => {
   return (
