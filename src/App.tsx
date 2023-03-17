@@ -2,7 +2,13 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Box } from '@mui/material';
 
-import { Navbar, Feed, Video, ChannelDetail, SearchFeed } from './components';
+import {
+  Navbar,
+  Feed,
+  ChannelDetail,
+  SearchFeed,
+  VideoDetail,
+} from './components';
 
 const App: React.FC = () => {
   return (
@@ -11,7 +17,7 @@ const App: React.FC = () => {
         <Navbar />
         <Routes>
           <Route path='/' element={<Feed />} />
-          <Route path='/video/:id' element={<Video videos={[]} />} />
+          <Route path='/video/:id' element={<VideoDetail />} />
           <Route path='/channel/:id' element={<ChannelDetail />} />
           <Route path='/search/:searchTerm' element={<SearchFeed />} />
         </Routes>

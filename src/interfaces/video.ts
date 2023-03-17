@@ -27,6 +27,18 @@ export interface VideoSnippet {
   liveBroadcastContent: string;
   publishTime: string;
 }
+
+export interface VideoDetailI {
+  snippet: {
+    title: string;
+    channelId: string;
+    channelTitle: string;
+  };
+  statistics: {
+    viewCount?: any;
+    likeCount?: any;
+  };
+}
 export interface Thumbnails {
   default: Default;
   medium: Medium;
